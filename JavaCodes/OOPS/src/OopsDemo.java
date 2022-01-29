@@ -1,5 +1,9 @@
 public class OopsDemo {
 	int x = 10;
+	
+	public String toString() {
+        return "New Object Created...";
+    }
 
 	public static void main(String[] args) {
 		// TODO Auto-generated method stub
@@ -16,6 +20,9 @@ public class OopsDemo {
 		System.out.println(obj);	// internally calls toString
 		System.out.println(obj.toString());
 		System.out.println(obj.getClass().getName() + "@" + Integer.toHexString(obj.hashCode()));
+		
+		
+		
 	}
 
 }
