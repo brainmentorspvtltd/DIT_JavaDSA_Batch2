@@ -1,0 +1,42 @@
+Super vs This
+
+Method Overriding Vs Variable Overriding
+- Methods are override but variables don't
+- Variable are binded with type of object not with object
+
+MultiLevel Hierarchy
+
+Overriding Rules
+Overloading and its Rules
+
+3 rules for overriding (we are discussing only 2 right now)
+Rule 1 : - Weaker Access Rule
+  - Scope of variables - private -> default -> protected -> public
+    - private - accessible only within the class
+    - default - can be accessed by any class but within same package
+    - protected - can be accessed within package, can also be accessed outside the
+      package using inheritance
+    - public - can be accessed anywhere by any class...
+
+Packages : Group of Classes
+- we use packages to achieve modularity
+
+Rule 2 : - Covariant Return Types
+
+
+
+Overloading and its rules
+- No of arguments can be changed
+- Type of arguments can be changed
+- Order of arguments can be changed
+- IS-A is not mandatory
+
+Type Promotion
+
+
+
+
+
+
+
+
