@@ -1,0 +1,130 @@
+Interface Use Ways
+Multiple Inheritance
+Default
+Static
+Memory Management
+String / StringBuffer / StringBuilder
+============================================
+
+Interface Use Ways
+- Class Way (once class is created new objects will keep on creating)
+- Object Way (when we create an object, then class will be created...)
+  - Lazy loading of class, class will be loaded only when we create object
+  - Anonymous class will be created based on interface
+  - byte code of anonymous class will be generated separately
+
+Functional Interface (SAM - Single Abstract Method)
+- the interface which has only one method...
+- only in these cases we can create anonymous class
+
+Lambda Expression - java 8 onwards
+
+======================================================
+
+Multiple Inheritance
+- Only supported for interface
+- Interface will not conflict because they are binded with there names...
+
+======================================================
+
+Default Keyword
+
+Interfaces are 100% abstract ?
+- Interfaces are not flexible...
+
+But after java 8 onwards there is a keyword default
+which makes interfaces flexible that means interfaces are no more 100% abstract
+
+- If we create interface than we implement the interface in abstract class for common functionalities
+- then we extend the abstract class, now there is one problem...that we cannot inherit any other class...
+- From java 8 onwards, interfaces are not 100% abstract
+- we just need to put default keyword before a function name
+
+Disadvantage of default...
+- Ambiguity will start
+
+========================================================
+
+Static Keyword
+- All static things are loaded with class, that's why main method is static
+
+
+static variable
+static block
+static methods
+static method with interface
+static import
+
+S O L I D
+O - Open Class Principle
+- Class is open for extension but close for modification
+
+If we make static methods in a class so we should make private constuctor of that class and that class should also be final
+
+Now if we want to import any static variable that belongs to some static class than static keyword should be used with import
+
+===================================================================
+
+Memory Management
+
+
+Code Implementation
+- Garbage Collector comes when CPU is idle..
+- When master is working then GC won't come
+- So GC decides to come in between when it starts to print or taking input
+- So we need to introduce cache memory in between. So cpu will process the request and put it in buffer. Now cpu is free...and when we need output then it comes out from buffer...
+- So at that point we can request to GC to come and perform garbage collection
+
+- So finalize method will be called whenever system will be idle and system is idle when it is doing input and output
+
+
+Change Heap Size
+-Xmx4m
+
+========================================================
+
+Strings
+- Internally Char[]
+
+String name = "Ravi";
+Internally char[] = {'R', 'a', 'v', 'i'}
+
+String is a pre-defined class
+String is a final class, so we can't inherit
+
+String object can be created in 2 ways :
+   String name = "Ravi";
+   String name = new String("Ravi");
+   
+String objects are immutable
+
+Using syntax : String name = "Ravi";
+- When we initialize string then there is a heap where objects are created...
+- Whenever string object is created in heap then it is stored inside String pool
+
+- So when we initalize string then it checks in string pool whether that string is already exists in pool or not...
+- In object already exists then it will refer to same address
+- If we have n number of objects with same value then only one object is created...
+- Either 1 object is created or 0 object will be created...
+
+Using Syntax String str = new String("Ravi");
+- In string pool it also checks whether string already exists or not...
+- If there is no existing object with same value then It creates the object in pool and also a copy of it...
+- Now if there is already an object with same value then it creates copy only
+- Either 1 object is created or 2 objects are created...
+
+
+
+StringBuffer vs StringBuilder
+- StringBuffer is single threaded
+- If you want thread safety then use StringBuffer
+
+- StringBuilder is faster than StringBuffer and also preferred over StringBuffer
+
+
+
+
+
+
+
+
