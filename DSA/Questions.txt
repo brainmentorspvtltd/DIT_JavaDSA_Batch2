@@ -1,0 +1,4 @@
+1. Largest Element in an Array
+2. Second Largest Element in an Array
+3. Third Largest Element in an Array
+4. Span of an Array - Difference b/w the max and min element of array
