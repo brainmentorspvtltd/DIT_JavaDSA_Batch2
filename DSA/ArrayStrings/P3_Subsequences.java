@@ -25,6 +25,7 @@ public class P3_Subsequences {
         }
         System.out.println(subSeq);
     }
+
     public static void main(String[] args) {
         String str = "ravi";
         solution(str);
