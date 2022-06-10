@@ -16,16 +16,17 @@ public class P9_RabinKarpPattern {
         int n = str.length();
         int p = pattern.length();
         int d = pattern.length();
-        int x = 1;
         // int d = 256;
         int q = 13;
         int stringHash = 0;
         int patternHash = 0;
+        int x = 1;
 
         // pow(d, p-1) % q
         for(int i = 0; i < p-1; i++) {
             x = (x * d) % q;
         }
+        System.out.println("X is : " + x);
 
         for(int i = 0; i < p; i++) {
             patternHash = (patternHash * d + (pattern.charAt(i))) % q;
