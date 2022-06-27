@@ -17,6 +17,17 @@ public class P3_SudokuSolver {
 
     static boolean solver(int row, int col) {
 
+        // Move to the next row
+        if(col == MAX_SIZE) {
+            row =  row + 1;
+            col = 0;
+        }
+
+        if(row == MAX_SIZE) {
+            display();
+            return true;
+        }
+        
         // check if cell is unassigned or not
         if(board[row][col] != 0) {
             return solver(row, col+1);
@@ -59,7 +70,7 @@ public class P3_SudokuSolver {
         int r = row - row % 3;
         int c = col - col % 3;
         for(int i = r; i < r + 3; i++) {
-            for(int j = c; j < c + 3; c++) {
+            for(int j = c; j < c + 3; j++) {
                 if(board[i][j] == data) {
                     return true;
                 }
@@ -72,6 +83,18 @@ public class P3_SudokuSolver {
         return !isPresentInRow(row, data) && !isPresentInCol(col, data) && !isPresentInGrid(row, col, data);
     }
 
+    static void display() {
+        for(int i = 0; i < MAX_SIZE; i++) {
+            for(int j = 0; j < MAX_SIZE; j++) {
+                System.out.print(board[i][j] + ",");
+            }
+            System.out.println();
+        }
+    }
 
+    public static void main(String[] args) {
+        String res = solver(0, 0) ? "Solved" : "Not Solved..";
+        System.out.println(res);
+    }
 
 }
