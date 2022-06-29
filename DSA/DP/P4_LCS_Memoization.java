@@ -24,4 +24,23 @@ public class P4_LCS_Memoization {
         return cache[m-1][n-1];
 
     }
+
+    public static void main(String[] args) {
+        String first = "qpqrr";
+        String second = "pqprqrp";
+        int m = first.length();
+        int n = second.length();
+        int cache[][] = new int[m+1][n+1];
+        // int res = lcs(first, second, m, n, cache);
+        // System.out.println("Length is : "+ res);
+
+        lcs(first, second, m, n, cache);
+        for(int i = 0; i < m; i++) {
+            for(int j = 0; j < n; j++) {
+                System.out.print(cache[i][j] + ",");
+            }
+            System.out.println();
+        }
+
+    }
 }
