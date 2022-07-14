@@ -1,4 +1,5 @@
 import java.util.ArrayList;
+import java.util.LinkedList;
 import java.util.Scanner;
 import java.util.Stack;
 
@@ -175,6 +176,25 @@ public class BinaryTreeOperations {
 
         return list;
 
+    }
+
+    void inOrderIterative() {
+        // Logic
+    }
+
+    void levelOrder(BinaryTree<Integer> root) {
+        LinkedList<BinaryTree<Integer>> queue = new LinkedList<>();
+        queue.add(root);
+        while(!queue.isEmpty()) {
+            BinaryTree<Integer> node = queue.removeFirst();
+            System.out.println(node.data);
+            if(node.left != null) {
+                queue.addLast(node.left);
+            }
+            if(node.right != null) {
+                queue.addLast(node.right);
+            }
+        }
     }
 
     void print(BinaryTree<Integer> root) {
