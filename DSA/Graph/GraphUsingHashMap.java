@@ -34,6 +34,13 @@ class GraphOperations {
         second.neighbours.put(firstVertex, weight);
     }
 
+    void print() {
+        for(Map.Entry<String, Vertex> currentVertex : vertices.entrySet()) {
+            System.out.println(currentVertex.getKey() + " => " + currentVertex.getValue().neighbours);
+        }
+    }
+}
+
 }
 
 public class GraphUsingHashMap {
